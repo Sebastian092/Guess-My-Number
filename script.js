@@ -5,6 +5,16 @@ const textMessage = function (message) {
     document.querySelector('.message').inner.Text = message;
 }
 
+document.querySelector('.again').addEventListener('click', function () {
+    score = 20;
+    document.querySelector('.score').inner.Text = score;
+    textMessage('Start guessing...');
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
+    document.querySelector('.number').textContent = "?"
+    document.querySelector('.guess').value = "";
+    document.querySelector('body').style.background = '#222';
+});
+
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value);
 
