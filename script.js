@@ -2,12 +2,12 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 const textMessage = function (message) {
-    document.querySelector('.message').inner.Text = message;
+    document.querySelector('.message').textContent = message;
 }
 
 document.querySelector('.again').addEventListener('click', function () {
     score = 20;
-    document.querySelector('.score').inner.Text = score;
+    document.querySelector('.score').textContent = score;
     textMessage('Start guessing...');
     secretNumber = Math.trunc(Math.random() * 20) + 1;
     document.querySelector('.number').textContent = "?"
